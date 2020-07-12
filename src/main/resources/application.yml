@@ -1,0 +1,17 @@
+  spring:
+    profiles: dev
+  name: mobile-dev
+  environment: dev
+  servers:
+    - www.abc.test.com
+    - www.abc.test1.com
+
+---
+
+  spring:
+    profiles: prod
+  name: mobile-prod
+  environment: prod
+  servers:
+    - www.abc.prod.com
+    - www.abc2.prod.com
