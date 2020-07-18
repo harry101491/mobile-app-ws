@@ -16,8 +16,12 @@ import javax.validation.Valid;
 @RequestMapping("/users") // http://localhost:8080/users/
 public class UserController {
 
+    private UserService userService;
+
     @Autowired
-    UserService userService;
+    public UserController(UserService userService) {
+        this.userService = userService;
+    }
 
     @GetMapping()
     public String getUsers(@RequestParam(value = "page", defaultValue = "1") int page,
